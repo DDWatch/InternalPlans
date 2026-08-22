@@ -145,11 +145,22 @@
       text-align: center;
     }
 
-    .whatsapp-logo {
-      display: block;
-      width: 88px;
-      height: auto;
+    /* 绿色 WhatsApp Logo */
+    .whatsapp-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
       margin: 0 auto 19px;
+      color: #25d366;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .whatsapp-symbol {
+      display: block;
+      width: 20px;
+      height: 20px;
     }
 
     h1 {
@@ -210,9 +221,14 @@
         padding: 23px 14px 30px;
       }
 
-      .whatsapp-logo {
-        width: 84px;
+      .whatsapp-brand {
+        font-size: 13.5px;
         margin-bottom: 18px;
+      }
+
+      .whatsapp-symbol {
+        width: 19px;
+        height: 19px;
       }
 
       h1 {
@@ -244,12 +260,15 @@
   <main class="page">
     <section class="card">
 
-      <!-- 完整 WhatsApp Logo -->
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/f/f7/WhatsApp_logo.svg"
-        alt="WhatsApp"
-        class="whatsapp-logo"
-      >
+      <!-- 绿色 WhatsApp 图标和文字 -->
+      <div class="whatsapp-brand">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt=""
+          class="whatsapp-symbol"
+        >
+        <span>WhatsApp</span>
+      </div>
 
       <h1>
         Daily US Watchlist — names &amp; the levels that matter
