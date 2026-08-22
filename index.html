@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Chris</title>
+
+  <meta
+    name="description"
+    content="Private updates shared directly through WhatsApp."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://ddwatch.github.io/InternalPlans/"
+  >
+
+  <!-- WhatsApp / Telegram / Facebook -->
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:site_name"
+    content="Chris"
+  >
+
+  <meta
+    property="og:title"
+    content="Chris"
+  >
+
+  <meta
+    property="og:description"
+    content="Private updates shared directly through WhatsApp."
+  >
+
+  <meta
+    property="og:url"
+    content="https://ddwatch.github.io/InternalPlans/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://ddwatch.github.io/InternalPlans/Chris/Chris.jpg?v=1"
+  >
+
+  <meta
+    property="og:image:secure_url"
+    content="https://ddwatch.github.io/InternalPlans/Chris/Chris.jpg?v=1"
+  >
+
+  <meta
+    property="og:image:type"
+    content="image/jpeg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Chris"
+  >
+
+  <!-- X预览 -->
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Chris"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Private updates shared directly through WhatsApp."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://ddwatch.github.io/InternalPlans/Chris/Chris.jpg?v=1"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="Chris"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #111111;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 35px 0 50px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .profile-image {
+      display: block;
+      width: 65%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 24px;
+      object-fit: cover;
+    }
+
+    .description {
+      margin: 0 0 24px;
+      color: #222222;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .whatsapp-button {
+      display: block;
+      width: 100%;
+      margin-bottom: 18px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: #25d366;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .whatsapp-button:hover,
+    .whatsapp-button:focus-visible {
+      background: #20bd5a;
+    }
+
+    .footer-text {
+      color: #555555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+        padding-top: 25px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Chris</h1>
+
+    <!-- 落地页图片 -->
+    <img
+      src="Chris/Chris.jpg"
+      alt="Chris"
+      class="profile-image"
+    >
+
+    <p class="description">
+      Private updates shared directly through WhatsApp.
+    </p>
+
+    <!-- WhatsApp号码和消息 -->
+    <a
+      id="whatsapp-button"
+      href="https://wa.me/8613973916456"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Contact on WhatsApp
+    </a>
+
+    <div class="footer-text">
+      Direct access · private updates · no spam.
+    </div>
+  </main>
+
+  <script>
+    const whatsappNumber = "8613973916456";
+    const whatsappButton = document.getElementById("whatsapp-button");
+
+    async function loadWhatsAppMessage() {
+      try {
+        const response = await fetch("./msg", {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error(`Unable to load msg: ${response.status}`);
+        }
+
+        const message = (await response.text()).trim();
+
+        if (!message) {
+          throw new Error("msg is empty");
+        }
+
+        whatsappButton.href =
+          `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      } catch (error) {
+        console.error(error);
+        whatsappButton.href = `https://wa.me/${whatsappNumber}`;
+      }
+    }
+
+    loadWhatsAppMessage();
+  </script>
+</body>
+</html>
