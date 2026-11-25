@@ -1,0 +1,19 @@
+{
+  "accounts": [
+    {
+      "id": "whatsapp-1",
+      "phone": "17248921474",
+      "enabled": true
+    },
+    {
+      "id": "whatsapp-2",
+      "phone": "17248921474",
+      "enabled": true
+    },
+    {
+      "id": "whatsapp-3",
+      "phone": "17248921474",
+      "enabled": true
+    }
+  ]
+}
