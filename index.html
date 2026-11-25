@@ -75,7 +75,7 @@ function prepare(force = false) {
       if(!response.ok) throw new Error('Unavailable');
       const phone = choose(await response.json(), remembered());
       remember(phone);
-      readyHref = 'https://wa.me/' + phone + '?text=pls';
+      readyHref = 'https://wa.me/' + phone + '?text=Join';
       readyAt = Date.now();
       number.textContent = format(phone);
       button.href = readyHref;
